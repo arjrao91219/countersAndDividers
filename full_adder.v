@@ -1,0 +1,11 @@
+`timescale 1ns / 1ps
+
+module full_adder(
+    input A, B, Cin,
+    output Y, Cout
+);
+
+assign Y = A ^ B ^ Cin;
+assign Cout = (A&B) | (B&Cin) | (A&Cin);
+
+endmodule
